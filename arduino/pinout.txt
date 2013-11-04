@@ -1,0 +1,7 @@
+
+
+PWM out on arduino pin 9   portb[1]  OC1A
+
+ADDR[0:2] on ana[0:2]  portc[0:2]
+ANAIN on ANA3          portc[3]       
+
