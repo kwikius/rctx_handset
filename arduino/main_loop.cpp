@@ -36,8 +36,8 @@ void default_mixer_calculate();
 
 void mix_calc()
 {
-   Tensor_calculate();
-     // default_mixer_calculate();
+  // Tensor_calculate();
+   default_mixer_calculate();
 }
 
 extern "C" void loop()
