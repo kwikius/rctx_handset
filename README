@@ -18,4 +18,11 @@ Prerequisites
 
    You can compile and build the project using gnu-make and the provided Makefile. You will need to hack the Makefile to change various directoroes and settings.
    See the Makefile for details.
-   use "make upload" to upload to the board
+   use "make upload" to upload to the board.
+
+N.B. As it stands you change settings by rewriting the source code. 
+This project is tailored to my hardware. You will need to tweak the files especially for the mixers.
+The intent is to write your own mixer functions for your application.
+
+Use https://github.com/kwikius/rctx_handset/blob/master/arduino/default_mixer.cpp as a template.
+See https://github.com/kwikius/rctx_handset/blob/master/arduino/Tensor_V2_mixer.cpp for an example of a customised mixer
