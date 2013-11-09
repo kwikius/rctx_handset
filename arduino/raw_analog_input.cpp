@@ -5,6 +5,7 @@
 
 uint8_t raw_analog_input::num_channels = 8U;
 volatile uint16_t raw_analog_input::channel_value[raw_analog_input::max_channels] = {0};
+//throttle and rudder reversed
 uint8_t raw_analog_input::reversed_mask = bit(2) | bit(3);
 
 // if an input channel is reversed
