@@ -89,13 +89,13 @@ Discarded input sections
  .text          0x00000000        0x0 Tensor_V2_mixer.o
  .data          0x00000000        0x0 Tensor_V2_mixer.o
  .bss           0x00000000        0x0 Tensor_V2_mixer.o
+ .text._ZN12_GLOBAL__N_124get_normed_input_channelEh
+                0x00000000       0x54 Tensor_V2_mixer.o
+ .text._Z16Tensor_calculatev
+                0x00000000      0x162 Tensor_V2_mixer.o
  .text          0x00000000        0x0 default_mixer.o
  .data          0x00000000        0x0 default_mixer.o
  .bss           0x00000000        0x0 default_mixer.o
- .text._ZN12_GLOBAL__N_124get_normed_input_channelEh
-                0x00000000       0x54 default_mixer.o
- .text._Z23default_mixer_calculatev
-                0x00000000       0xb6 default_mixer.o
  .text          0x00000000        0x0 pulse_output.o
  .data          0x00000000        0x0 pulse_output.o
  .bss           0x00000000        0x0 pulse_output.o
@@ -443,7 +443,7 @@ LOAD /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1d86
+.text           0x00000000     0x1ce6
  *(.vectors)
  .vectors       0x00000000       0x68 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vectors
@@ -571,65 +571,65 @@ LOAD /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a
  .text._ZN16raw_analog_input4initEv
                 0x0000142e       0x98 raw_analog_input.o
                 0x0000142e                _ZN16raw_analog_input4initEv
- .text._ZN12_GLOBAL__N_124get_normed_input_channelEh
-                0x000014c6       0x54 Tensor_V2_mixer.o
- .text._Z16Tensor_calculatev
-                0x0000151a      0x162 Tensor_V2_mixer.o
-                0x0000151a                _Z16Tensor_calculatev
  .text.startup._GLOBAL__sub_I__Z16Tensor_calculatev
-                0x0000167c       0x9a Tensor_V2_mixer.o
+                0x000014c6       0x9a Tensor_V2_mixer.o
+ .text._ZN12_GLOBAL__N_124get_normed_input_channelEh
+                0x00001560       0x54 default_mixer.o
+ .text._Z23default_mixer_calculatev
+                0x000015b4       0xc2 default_mixer.o
+                0x000015b4                _Z23default_mixer_calculatev
  .text.startup._GLOBAL__sub_I__Z23default_mixer_calculatev
-                0x00001716       0x9a default_mixer.o
+                0x00001676       0x9a default_mixer.o
  .text._ZN12pulse_output11is_reversedEh
-                0x000017b0       0x16 pulse_output.o
-                0x000017b0                _ZN12pulse_output11is_reversedEh
+                0x00001710       0x16 pulse_output.o
+                0x00001710                _ZN12pulse_output11is_reversedEh
  .text._ZN12pulse_output11set_channelEhRKf
-                0x000017c6       0x72 pulse_output.o
-                0x000017c6                _ZN12pulse_output11set_channelEhRKf
+                0x00001726       0x72 pulse_output.o
+                0x00001726                _ZN12pulse_output11set_channelEhRKf
  .text.__vector_11
-                0x00001838      0x11c pulse_output.o
-                0x00001838                __vector_11
+                0x00001798      0x11c pulse_output.o
+                0x00001798                __vector_11
  .text._ZN12pulse_output5setupEv
-                0x00001954       0x66 pulse_output.o
-                0x00001954                _ZN12pulse_output5setupEv
+                0x000018b4       0x66 pulse_output.o
+                0x000018b4                _ZN12pulse_output5setupEv
  .text.libgcc.div
-                0x000019ba       0x28 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_udivmodhi4.o)
-                0x000019ba                __udivmodhi4
+                0x0000191a       0x28 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000191a                __udivmodhi4
  .text.libgcc.prologue
-                0x000019e2       0x38 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_prologue.o)
-                0x000019e2                __prologue_saves__
+                0x00001942       0x38 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_prologue.o)
+                0x00001942                __prologue_saves__
  .text.libgcc.prologue
-                0x00001a1a       0x36 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_epilogue.o)
-                0x00001a1a                __epilogue_restores__
- .text.libgcc   0x00001a50        0xc /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_tablejump.o)
-                0x00001a50                __tablejump2__
-                0x00001a54                __tablejump__
+                0x0000197a       0x36 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_epilogue.o)
+                0x0000197a                __epilogue_restores__
+ .text.libgcc   0x000019b0        0xc /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_tablejump.o)
+                0x000019b0                __tablejump2__
+                0x000019b4                __tablejump__
  .text.libgcc.builtins
-                0x00001a5c       0x12 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clzsi2.o)
-                0x00001a5c                __clzsi2
+                0x000019bc       0x12 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clzsi2.o)
+                0x000019bc                __clzsi2
  .text.libgcc.builtins
-                0x00001a6e       0x24 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clzhi2.o)
-                0x00001a6e                __clzhi2
+                0x000019ce       0x24 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clzhi2.o)
+                0x000019ce                __clzhi2
  .text.avr-libc
-                0x00001a92      0x1b0 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(ftoa_engine.o)
-                0x00001a92                __ftoa_engine
+                0x000019f2      0x1b0 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(ftoa_engine.o)
+                0x000019f2                __ftoa_engine
  .text.avr-libc
-                0x00001c42       0x16 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(strnlen_P.o)
-                0x00001c42                strnlen_P
+                0x00001ba2       0x16 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(strnlen_P.o)
+                0x00001ba2                strnlen_P
  .text.avr-libc
-                0x00001c58       0x16 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(strnlen.o)
-                0x00001c58                strnlen
+                0x00001bb8       0x16 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(strnlen.o)
+                0x00001bb8                strnlen
  .text.avr-libc
-                0x00001c6e       0x58 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(fputc.o)
-                0x00001c6e                fputc
+                0x00001bce       0x58 /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(fputc.o)
+                0x00001bce                fputc
  .text.avr-libc
-                0x00001cc6       0xbc /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(ultoa_invert.o)
-                0x00001cc6                __ultoa_invert
-                0x00001d82                . = ALIGN (0x2)
+                0x00001c26       0xbc /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a(ultoa_invert.o)
+                0x00001c26                __ultoa_invert
+                0x00001ce2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00001d82        0x0 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
-                0x00001d82                exit
-                0x00001d82                _exit
+ .fini9         0x00001ce2        0x0 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+                0x00001ce2                exit
+                0x00001ce2                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -648,11 +648,11 @@ LOAD /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00001d82        0x4 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .fini0         0x00001ce2        0x4 /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x00001d86                _etext = .
+                0x00001ce6                _etext = .
 
-.data           0x00800100       0x10 load address 0x00001d86
+.data           0x00800100       0x10 load address 0x00001ce6
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -708,8 +708,8 @@ LOAD /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a
                 0x00800174        0x1 pulse_output.o
  *(COMMON)
                 0x00800175                PROVIDE (__bss_end, .)
-                0x00001d86                __data_load_start = LOADADDR (.data)
-                0x00001d96                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001ce6                __data_load_start = LOADADDR (.data)
+                0x00001cf6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800175        0x0
                 0x00800175                PROVIDE (__noinit_start, .)
@@ -817,7 +817,6 @@ Cross Reference Table
 
 Symbol                                            File
 Tensor_calculate()                                Tensor_V2_mixer.o
-                                                  main_loop.o
 __addsf3                                          /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_addsub_sf.o)
 __bad_interrupt                                   /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm328p.o
 __bss_end                                         /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
@@ -885,6 +884,7 @@ __prologue_saves__                                /opt/avr-gcc/lib/gcc/avr/4.7.0
                                                   /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libprintf_flt.a(vfprintf_flt.o)
 __stack                                           /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm328p.o
 __subsf3                                          /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_addsub_sf.o)
+                                                  default_mixer.o
                                                   Tensor_V2_mixer.o
 __tablejump2__                                    /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_tablejump.o)
 __tablejump__                                     /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_tablejump.o)
@@ -935,6 +935,7 @@ __vector_default                                  /opt/avr-gcc/lib/gcc/avr/4.7.0
 __vectors                                         /opt/avr-gcc/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm328p.o
 _exit                                             /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
 default_mixer_calculate()                         default_mixer.o
+                                                  main_loop.o
 eeprom::accessor<unsigned char, void>::read(unsigned int, unsigned char&) eeprom_read_write_config.o
 eeprom_write_default_config()                     eeprom_read_write_config.o
 exit                                              /opt/avr-gcc/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
