@@ -17,7 +17,7 @@ namespace {
   uint8_t input_channel_map::throttle = 2;
   uint8_t input_channel_map::yaw = 3;
   uint8_t input_channel_map::flight_mode = 4;
-  uint8_t input_channel_map::flap = 4;
+  uint8_t input_channel_map::flap = 5;
 
   struct input_channel_info_t{
       input_channel_info_t(float const & gain_in)
@@ -29,10 +29,10 @@ namespace {
    = {
       { 1.0f},
       { 1.0f}, 
-      { 1.1f}, 
+      { 1.4f}, 
       { 1.0f}, 
       { 1.0f},
-      { 1.15f},
+      { 1.2f}, 
       { 1.0f},
       { 1.0f}
   };
@@ -69,9 +69,10 @@ namespace {
        return get_normed_input_channel(input_channel_map::flap);
    }
 
+   float const throttle_offset = 0.2f;
    float get_throttle()
    {
-       return get_normed_input_channel(input_channel_map::throttle);
+       return get_normed_input_channel(input_channel_map::throttle) - throttle_offset;
    }
 
    float get_flight_mode()
@@ -105,6 +106,4 @@ void default_mixer_calculate()
    pulse_output::set_channel(output_channel_map::rudder,get_yaw());
    pulse_output::set_channel(output_channel_map::flight_mode,get_flight_mode());
    pulse_output::set_channel(output_channel_map::flap,get_flap());
-
-
 }
